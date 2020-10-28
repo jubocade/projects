@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#info">about</a></li>
+                <li><a href="#portfolio">portfolio</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+        <div class="header__hamburger">
+            <div class="header__hamburger__lines">
+                <div></div>
+                <div></div>
+                 <div></div>
+            </div>
+    
+            <ul class="header__hamburger__mobileLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#info">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>    
+    </header>
+
+    <main>
+        <section class="home" id="home">
+            <div class="home__bannerText">
+                <h2>Hello I am <span>Jubo Mdivnishvili</span>.</h2>
+                <h2 id="second">I'm a Front end developer. </h2>
+            </div>
+        </section>
+
+        <section class="info" id="info">
+            <div class="info__about">
+                <div class="info__about__personal">
+                    <div><img src="images/me.jpg" alt=""></div>
+                    <p>I have been studying front end web development since April 6, 2020. I study in Tbilisi State University and also in IT Step Academy Georgia.
+                    </p>
+                   </div>
+                   <div class="info__about__skills">
+                       <h1>Skills:</h1>
+                       <h2>HTML</h2>
+                       <h2>CSS</h2>
+                       <h2>Bootstrap</h2>
+                       <h2>Javascript</h2>
+                       <h2>jQuery</h2>
+                       <h2>React</h2>
+                   </div>
+            </div>
+        </section>
+
+        <section class="portfolio" id="portfolio">
+           <div class="portfolio__projects">
+
+               <div class="portfolio__projects__info">
+                    <h1>Projects</h1>
+                    <p>These projects are not done for any company, so they are not real, I created them just for practice</p>
+               </div>
+
+               <div class="portfolio__projects__list">
+                   <div class="portfolio__projects__list__buttons">
+                       <button class="portfolio__projects__list__buttons--all">
+                            All
+                       </button>
+                       <button class="portfolio__projects__list__buttons--js">
+                           Javascript
+                    </button>
+                    <button class="portfolio__projects__list__buttons--react">
+                           React
+                    </button>
+                   </div>
+
+                   <div class="portfolio__projects__list__all">
+
+                    
+                    <div class="portfolio__projects__list__all__project react">
+                        <img src="images/covid-screenshot.PNG" alt="covid-pic">
+                        <div>
+                            <button><a href="https://jubocade.github.io/covid-tracker/" target="_blank">View</a></button>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__projects__list__all__project react">
+                        <img src="images/recipe-react-app-screenshot.PNG" alt="recipes">
+                        <div>
+                            <button><a href="https://jubocade.github.io/recipes-app/" target="_blank">View</a></button>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__projects__list__all__project react">
+                        <img src="images/todo-screenshot.PNG" alt="todoList">
+                        <div>
+                            <button><a href="https://jubocade.github.io/todo-list/" target="_blank">View</a></button>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__projects__list__all__project react">
+                        <img src="images/weather-app-screenshot.PNG" alt="weather">
+                        <div>
+                            <button><a href="https://jubocade.github.io/react-weather-app/" target="_blank">View</a></button>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__projects__list__all__project js">
+                        <img src="images/random-square-screenshot.PNG" alt="cube">
+                        <div>
+                            <button><a href="https://jubocade.github.io/random-square/random-square-game/" target="_blank">View</a></button>
+                        </div>
+                    </div>
+
+                   </div>
+
+               </div>
+
+           </div>
+        </section>
+    
+    </main>
+
+    <footer>
+        <section class="contact" id="contact">
+            <div class="contact__info">
+                <h1>Contact</h1>
+                <h4>Contact</h4>
+                <h3>+995555568471</h3>
+                <h5>+995555568471</h5>
+                <h3>jubomdivnishvili@gmail.com</h3>
+                <h5>jubomdivnishvili@gmail.com</h5>
+                <div class="contact__info__socialMedia">
+                    <a href="https://www.facebook.com/epk.shl.5">  <i class="fa fa-facebook"></i></a>
+                 <span></i>Jubo Mdivnishvili <i class="fa fa-copyright"></i> 2020</span>
+                </div>
+            </div>
+         </section>
+    </footer>
+</body>
+<script src="js/app.js"></script>
+</html>

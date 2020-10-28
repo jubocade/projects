@@ -1,0 +1,558 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
+}
+ 
+:root {
+    --black: #1B242F; 
+    --pink: #E31B6D;
+}
+
+body {
+    background-color: var(--pink);
+}
+
+section {
+    background-color: var(--black);
+}
+
+.header {
+    top: 0px;
+    z-index: 100;
+    height: 50px;
+    position: sticky;
+    padding: 2px;
+    background-color: var(--black);
+    border-bottom: 3px solid var(--pink)
+}
+
+.header__nav > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    height: 90%;
+    width: 50%;
+    margin: auto 5%;
+}
+
+.header__nav > ul > li {
+    padding: 12px;
+    border-radius: 4px;
+}
+
+.header__nav > ul > li:hover {
+    transition: 0.2s;
+    background-color: var(--pink);
+}
+
+.header__nav > ul > li > a {
+    color: white;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.header__hamburger {
+    display: none;
+}
+
+.home {
+    height: 100vh;
+    clip-path: polygon(0 0, 100% 0, 100% 400px, 0 100%);
+}
+
+.home__bannerText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home__bannerText h2 {
+    transform-origin: left;
+    color: white;
+    transform: scaleX(0);
+    animation: revealTextPre 1s ease-in-out forwards;
+}
+
+.home__bannerText h2 span {
+    color: var(--pink)
+}
+
+.home__bannerText h2:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color:var(--pink);
+    transform-origin: right;
+    animation: revealText 1s ease-in-out forwards;
+    animation-delay: 3s;
+}
+
+.home__bannerText h2:nth-child(2):before {
+    animation-delay: 4s;
+}
+
+.home__bannerText h2 {
+    animation-delay: 2s;
+    font-size: 40px;
+}
+
+.home__bannerText h2:nth-child(2) {
+    animation-delay: 3s;
+    margin-top: 10px;
+}
+
+@keyframes revealText {
+    0% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: scaleX(0);
+    }
+}
+
+@keyframes revealTextPre {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+main {
+    min-height: calc(100vh - 400px);
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info__about {
+    min-height: 400px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.info__about__personal {
+    position: absolute;
+    left: 180px;
+    width: 40%;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transform: translateX(-700px);
+}
+
+.fade-left {
+    animation: fadeLeft 1.5s linear forwards;
+}
+
+@keyframes fadeLeft {
+    0% {
+        transform: translateX(-700px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+
+.info__about__personal p {
+    color: white;
+}
+
+.info__about__skills {
+    position: absolute;
+    right: 180px;
+    transform: translateX(700px);
+}
+
+.fade-right {
+    animation: fadeRight 1.5s linear forwards;
+}
+
+@keyframes fadeRight {
+    0% {
+        transform: translateX(700px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+
+.info__about__skills h1 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #E31B6D;
+}
+
+.info__about__skills h2 {
+    margin-top: 10px;
+    color: white;
+}
+
+.info__about__personal > div > img {
+    height: 200px;
+}
+
+.portfolio {
+    min-height: 600px;
+    background-color: var(--black);
+}
+
+.portfolio__projects {
+    margin: auto;
+    min-height: 500px;
+    width: 70%;
+}
+
+.portfolio__projects__info > h1 {
+    text-align: center;
+    color: white;
+}
+
+.portfolio__projects__info > p {
+    width: 70%;
+    margin: 20px auto;
+    color: white;
+}
+
+.portfolio__projects__list {
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.portfolio__projects__list__buttons {
+    width: 50%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.portfolio__projects__list__buttons button {
+    color: white;
+    padding: 10px;
+    min-width: 100px;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    outline:none;
+    font-weight: bold;
+}
+
+.portfolio__projects__list__all {
+    width: 90%;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.portfolio__projects__list__all__project {
+    position: relative;
+    width: 250px;
+    height: 150px;
+    margin: 10px;
+}
+
+.portfolio__projects__list__all__project > img {
+    height: 100%;
+    width: 100%;
+}
+
+.portfolio__projects__list__all__project > div {
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+}
+
+.portfolio__projects__list__all__project > div > button {
+    padding: 10px;
+    width: 35%;
+    cursor: pointer;
+    background-repeat:no-repeat;
+    border: none;
+    outline:none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.portfolio__projects__list__all__project > div > button > a {
+    color: white;
+    font-size: 16px;
+}
+
+footer {
+    min-height: 400px;
+    background-color: var(--black);
+}
+
+.contact {
+    padding-top: 70px;
+}
+
+.contact__info {
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contact__info > h1 {
+    font-size: 35px;
+    color: white;
+    text-align: center;
+}
+
+.contact__info h3 {
+    color: white;
+    text-align: center;
+}
+
+.contact__info h4, .contact__info h5 {
+    display: none;
+}
+
+.contact__info__socialMedia {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact__info__socialMedia>a > i {
+    color: white;
+    font-size: 30px;
+}
+
+.contact__info__socialMedia span {
+    font-size: 18px;
+    color: var(--pink);
+}
+
+
+@media(max-width: 768px) {
+    .header__nav > ul {
+        display: none;
+    }
+
+    .header__hamburger {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 5px;
+    }
+
+    .header__hamburger__mobileLinks {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+        background-color: var(--black);
+        list-style-type: none;
+        clip-path: circle(0px at 90% -10%);
+        transition: all 1s ease-in;
+    }
+
+    .header__hamburger__mobileLinks > li {
+        margin-top: 15px;
+    }
+
+    .header__hamburger__mobileLinks > li > a {
+        font-size: 30px;
+        color: var(--pink);
+    }
+
+    .header__hamburger__mobileLinks.open {
+        clip-path: circle(1100px at 90% -10%);
+    }
+
+    .header__hamburger__lines {
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        z-index: 110;
+    }
+
+    .header__hamburger__lines div {
+        height: 3px;
+        width: 30px;
+        background-color: white;
+        margin-top: 8px;
+    }
+
+    .home__bannerText h2 {
+        font-size: 25px;
+    }
+
+    .info__about {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 700px;
+        width: 100%;
+    }
+
+    .info__about__personal {
+        position: static;
+        width: 40%;
+        height: 330px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        transform: translateX(0);
+        opacity: 0;
+        width: 100%;
+    }
+    
+    .fade-left {
+        animation: fadeLeft 1.5s linear forwards;
+    }
+    
+    @keyframes fadeLeft {
+        0% {
+            opacity: 0;
+        }
+    
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    
+    .info__about__personal p {
+        color: white;
+        width: 90%;
+    }
+    
+    .info__about__skills {
+        position: static;
+        transform: translateX(0);
+        opacity: 0;
+    }
+    
+    .fade-right {
+        animation: fadeRight 1.5s linear forwards;
+    }
+    
+    @keyframes fadeRight {
+        0% {
+           opacity: 0;
+        }
+    
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    
+    .info__about__skills h1 {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        color: #E31B6D;
+    }
+    
+    .info__about__skills h2 {
+        margin-top: 10px;
+        color: white;
+    }
+
+    .portfolio__projects {
+        margin: auto;
+        min-height: 500px;
+        width: 90%;
+    }
+
+    .portfolio__projects__list__buttons {
+        width: 90%;
+        margin: 30px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .portfolio__projects__list__buttons button {
+        padding: 10px;
+        width: 70%;
+        border-radius: 4px;
+        font-size: 16px;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .portfolio__projects__list__all {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio__projects__list__all__project {
+        width: 90%;
+        height: 150px;
+        margin: 10px;
+    }
+    
+
+    .contact__info > h1 {
+      display: none;
+    }
+    
+    .contact__info h3 {  
+       display: none;
+    }
+
+    .contact__info h4, .contact__info h5 {
+        display: block;
+        color: white;
+    }
+}
+
+@media(width: 768px) {
+    .portfolio__projects {
+        margin: auto;
+        min-height: 500px;
+        width: 50%;
+    }
+}
